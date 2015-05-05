@@ -16,6 +16,18 @@ class ViewController: NSViewController {
         userTextField.editable = false
         self.clearAll()
     }
+    
+    override func viewWillAppear() {
+        
+        self.view.window!.opaque = false
+//        self.buildInTextField!.opaque = false
+//        self.userTextField!.opaque = false
+        
+        println(self.view.window!.backgroundColor! = NSColor(calibratedRed: 1.0*0.9, green: 0.98*0.9, blue: 0.89*0.9, alpha: 0.99))
+        self.buildInTextField.textColor! = NSColor(calibratedRed: 41.0/255.0, green: 66.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+        self.userTextField.textColor! = NSColor(calibratedRed: 185.0/255.0, green: 65.0/255.0, blue: 6.0/255.0, alpha: 1.0)
+        
+    }
 
     override var representedObject: AnyObject? {
         didSet {
@@ -102,6 +114,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var accuracy: NSTextField!
     @IBOutlet weak var buildInTextField: NSTextField!
     @IBOutlet weak var userTextField: NSTextField!
+    @IBOutlet var mainView: NSView!
     
     
     
